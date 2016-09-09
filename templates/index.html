@@ -1,0 +1,52 @@
+<!doctype html>
+<head>
+  <title>Chat</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div id="content"></div>
+  </div>
+
+  <div id="launch" style="display: none">
+    <h2>Chat App</h2>
+    <input type="text" class="text-field" id="name" /><br/>
+    <input type="submit" class="button" id="checkin-button" value="Check in" />
+  </div>
+
+  <div id="chat" class="chat" style="display: none">
+    <div>
+      <div class="messages" id="messages"></div>
+      <div id="users"></div>
+    </div>
+    <div class="text-entry">
+      <input class="text-field full-width" type="text" id="message-field" />
+      <button id="message-send" class="button">Send</button>
+    </div>
+  </div>
+
+  <div id="private-chat" class="chat" style="display: none">
+    <div id="chat-header">
+      <h3 id="user-header"></h3>
+      <button class="button blue-button" id="add-friend">Add friend</button>
+      <button class="button blue-button" id="block-user">Block</button>
+      <button class="button blue-button" id="back-room">Back to room</button>
+    </div>
+    <div>
+      <div class="messages private" id="private-messages"></div>
+    </div>
+    <div class="text-entry">
+      <input class="text-field full-width" type="text" id="private-message-field" />
+      <button class="button" id="private-send">Send</button>
+    </div>
+  </div>
+
+<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='socket.io.min.js') }}"></script>
+<script src="{{ url_for('static', filename='app.js' )}}"></script>
+<script type="text/javascript" charset="utf-8">
+  App.start();
+</script>
+
+</body>
+</html>
