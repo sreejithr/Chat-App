@@ -1,5 +1,5 @@
 # Chat App
-Chat App using Vanilla JS, Flask and Redis.
+Chat App using raw JS, Flask and Redis.
 
 ## Features
 - Implemented a navigation stack architecture in JS for ease of rendering.
